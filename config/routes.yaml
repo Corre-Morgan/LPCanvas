@@ -1,3 +1,14 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+index:
+    path: /index
+    controller: App\Controller\IndexController::index
+
+number:
+    path: /number/{id}
+    controller: App\Controller\IndexController::numberAction
+    requirements:
+        page: '\d+'
+
+put:
+    path: /put
+    controller: App\Controller\IndexController::putAction
+    methods: ['PUT']
