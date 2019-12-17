@@ -1,0 +1,30 @@
+plane:
+  path: /get/{id}
+  controller: App\Controller\PlaneController::getPlane
+  requirements:
+    page: '\d+'
+  methods: ['GET']
+
+createPlane:
+  path: /
+  controller: App\Controller\PlaneController::createPlane
+  methods: ['PUT', 'GET']
+
+updatePlane:
+  path: /plane/update/{id}
+  controller: App\Controller\PlaneController::updatePlane
+  requirements:
+    page: '\d+'
+  methods: ['GET']
+
+deletePlane:
+  path: /delete/{id}
+  controller: App\Controller\PlaneController::deletePlane
+  requirements:
+    page: '\d+'
+  methods: ['DELETE', 'GET']
+
+listPlane:
+  path: /list
+  controller: App\Controller\PlaneController::planeList
+  methods: ['GET']
