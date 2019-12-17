@@ -6,9 +6,115 @@ number:
     path: /number/{id}
     controller: App\Controller\IndexController::numberAction
     requirements:
-        page: '\d+'
+        id: '\d+'
 
 put:
     path: /put
     controller: App\Controller\IndexController::putAction
     methods: ['PUT']
+
+user:
+    path: /user
+    controller: App\Controller\UserController::userAction
+
+newUser:
+    path: /user/{lastName}/{firstName}
+    controller: App\Controller\UserController::newUser
+
+listUser:
+    path: /user/list
+    controller: App\Controller\UserController::userList
+
+plane:
+    resource: './routes/plane.yaml'
+    prefix: /plane
+
+airport:
+    path: /airport/get/{id}
+    controller: App\Controller\AirportController::getAirport
+    requirements:
+        page: '\d+'
+    methods: ['GET']
+
+createAirport:
+    path: /airport
+    controller: App\Controller\AirportController::createAirport
+
+updateAirport:
+    path: /airport/update/{id}
+    controller: App\Controller\AirportController::updateAirport
+    requirements:
+        page: '\d+'
+    methods: ['GET']
+
+deleteAirport:
+    path: /airport/delete/{id}
+    controller: App\Controller\AirportController::deleteAirport
+    requirements:
+        page: '\d+'
+    methods: ['DELETE', 'GET']
+
+listAirport:
+    path: /airport/list
+    controller: App\Controller\AirportController::airportList
+    methods: ['GET']
+
+flight:
+    path: /flight/get/{id}
+    controller: App\Controller\FlightController::getFlight
+    requirements:
+        page: '\d+'
+    methods: ['GET']
+
+createFlight:
+    path: /flight
+    controller: App\Controller\FlightController::createFlight
+
+updateFlight:
+    path: /flight/update/{id}
+    controller: App\Controller\FlightController::updateFlight
+    requirements:
+        page: '\d+'
+    methods: ['GET']
+
+deleteFlight:
+    path: /flight/delete/{id}
+    controller: App\Controller\FlightController::deleteFlight
+    requirements:
+        page: '\d+'
+    methods: ['DELETE', 'GET']
+
+listFlight:
+    path: /flight/list
+    controller: App\Controller\FlightController::flightList
+    methods: ['GET']
+
+pilot:
+    path: /pilot/get/{id}
+    controller: App\Controller\PilotController::getPilot
+    requirements:
+        page: '\d+'
+    methods: ['GET']
+
+createPilot:
+    path: /pilot
+    controller: App\Controller\PilotController::createPilot
+
+updatePilot:
+    path: /pilot/update/{id}
+    controller: App\Controller\PilotController::updatePilot
+    requirements:
+        page: '\d+'
+    methods: ['GET']
+
+deletePilot:
+    path: /pilot/delete/{id}
+    controller: App\Controller\PilotController::deletePilot
+    requirements:
+        page: '\d+'
+    methods: ['DELETE', 'GET']
+
+listPilot:
+    path: /pilot/list
+    controller: App\Controller\PilotController::pilotList
+    methods: ['GET']

@@ -4,7 +4,9 @@
 namespace App\Repository;
 
 
-class AirportRepository
+use Doctrine\ORM\EntityRepository;
+
+class AirportRepository extends EntityRepository
 {
 
 }

@@ -3,8 +3,9 @@
 
 namespace App\Repository;
 
+use Doctrine\ORM\EntityRepository;
 
-class PilotRepository
+class PilotRepository extends EntityRepository
 {
 
 }

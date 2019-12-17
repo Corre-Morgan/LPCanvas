@@ -3,8 +3,9 @@
 
 namespace App\Repository;
 
+use Doctrine\ORM\EntityRepository;
 
-class FlightRepository
+class FlightRepository extends EntityRepository
 {
 
 }
